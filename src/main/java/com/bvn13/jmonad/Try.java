@@ -42,6 +42,8 @@ public abstract class Try<T> {
 
     public abstract T orElseThrow(Throwable e) throws Throwable;
 
+    public abstract T orElseThrow() throws Throwable;
+
     public abstract Optional<T> toOptional();
 
     public abstract boolean isSuccess();

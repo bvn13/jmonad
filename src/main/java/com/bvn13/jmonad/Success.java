@@ -51,7 +51,11 @@ public class Success<T> extends Try<T> {
 
     @Override
     public T orElseThrow(Throwable e) throws Throwable {
-        Objects.requireNonNull(e);
+        return value;
+    }
+
+    @Override
+    public T orElseThrow() throws Throwable {
         return value;
     }
 

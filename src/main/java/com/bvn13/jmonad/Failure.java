@@ -50,6 +50,11 @@ public class Failure<T> extends Try<T> {
     }
 
     @Override
+    public T orElseThrow() throws Throwable {
+        throw e;
+    }
+
+    @Override
     public Optional<T> toOptional() {
         return Optional.empty();
     }
